@@ -1,0 +1,13 @@
+body[data-theme="light"] {
+    --color-primary: #073642;
+    --color-secondary: #859900;
+    --color-bg-primary: #fdf6e3;
+    --color-bg-header: #fdf6e3;
+}
+
+body[data-theme="dark"] {
+    --color-primary: #eee8d5;
+    --color-secondary: #cb4b16;
+    --color-bg-primary: #073642;
+    --color-bg-header: #073642;
+}

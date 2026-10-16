@@ -1,0 +1,112 @@
+{
+    "projects": [
+        {
+            "title": "FAIRSECO",
+            "startDate": "2022-9-8",
+            "endDate": "2023-2-1",
+            "imgRefs": [
+                {
+                    "url": "images/fairseco.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "images/fairseco2.png",
+                    "caption": "caption"
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/SecureSECO/FAIRSECO"
+                }
+            ],
+            "content": "The FAIRSECO GitHub Action analyzes a variety of data on research software projects. This includes: adherence to FAIR principles, license violations, SBOM, academic relevance, and reuse of code by other research software projects. Tasks completed during the project include:\n- Integrating third party systems into FAIRSECO\n- Gathering data from the GitHub repository to determine a quality score\n- Unit testing (Jest)\n- Implementing the dashboard design (EJS)\n- Documentation (Typedoc)\n\nThe GitHub Action is currently defunct, so the screenshots are from one of the latest dev builds."
+        },
+        {
+            "title": "Disaster Mayor",
+            "startDate": "2024-5-6",
+            "endDate": "2024-6-7",
+            "imgRefs": [
+                {
+                    "url": "dm1.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "dm2.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "dm3.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "dm4.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "dm5.png",
+                    "caption": "caption"
+                }
+            ],
+            "links": [],
+            "content": "For the course Serious Gaming we had to design and develop a (as you might have guessed by the course name) serious game. As wildfires have become more prevalent in recent years, we decided to make a game that aims to teach the player about wildfire prevention and mitigation. Out initial idea was to create a city builder, where the placement of buildings in certain locations and implementing certain policies at the right time would affect the way an impending fire would impact the city. We quickly realized that the scope of such a game would be way too large for the time we had. We simplified the concept a bit by making the game turn-based, and adding predefined construction sites where buildings could be spawned. The game narrative is about a town that is destroyed after a massive wildfire. The mayor is sent back in time (10 years before the fire) to prevent the town from being destroyed by implementing safety measures through legislation and construction of buildings. After 10 turns, the wildfire happens, and the player is shown a report showing how their decisions affected the number of casualties.\n\nAfter evaluation, we learned that the game was not very effective at letting players reach the learning goals. One possible reason for this is that the game doesn't provide any feedback on how a decision affects the outcome until the very end. Additionally, it could be possible that the amount of information is too overwhelming. The player is given a lot of freedom when it comes to decision-making, which makes the main gameloop a bit unpredictable. \n\nMy main contributions to the project are implementing the resource management and building systems, and designing and implementing the UI."
+        },
+        {
+            "title": "Object Retrieval System",
+            "startDate": "2024-9-9",
+            "endDate": "2024-10-25",
+            "imgRefs": [
+                {
+                    "url": "mr1.png",
+                    "caption": "caption"
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/Ophel1aLee/MR_Project"
+                }
+            ],
+            "content": "3D shape \"search engine\" for the course Multimedia Retrieval (INFOMMR). The system extracts features from a given query shape (obj file), and compares them to the precalculated feature vectors of the shapes in the database. It then returns the K most similar shapes. The features extracted from the shapes include scalar values like surface area, compactness, rectangularity and eccentricity, as well as shape property descriptors based on randomly sampled points on the surface of the shape."
+        },
+        {
+            "title": "The Unusual Suspects",
+            "startDate": "2025-9-15",
+            "endDate": "2025-11-5",
+            "imgRefs": [
+                {
+                    "url": "images/fairseco.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "images/fairseco2.png",
+                    "caption": "caption"
+                }
+            ],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/JarnoHendriksen/INFOMAICG_Project"
+                }
+            ],
+            "content": "Game prototype for the master course AI Content Generation. For this assignment, we had to produce a deliverable (could have been a video game, board game, movie trailer, etc.) that uses three different kinds of AI generated content.\n\nWe quickly came up with the idea of creating an interrogation game, where the player has to talk to a number of chatbots to figure out who the killer is. The LLM used for this is Qwen3 4K, which is one of the smaller models available in LLMUnity. Since the model is run locally, we needed to make sure it would run on our relatively modest machines, and we didn't want the model to take up too much storage. While this model is not quite as expressive as some of the larger models, the answers load much faster, making it much more responsive. Each character has its own instance, with its own system prompt. This system prompt includes detailed information about the character's personality, as well as their perspective of the story surrounding the murder, and directions of what they can and can't say.\n\nThe second type of AI generated content we included in the game are the character models. First, we generated images of the characters in a T-pose using Flux1 Dev Q4 with the LoPolyGen LoRA (as seen in the second image). Then, we fed these images to Tripo3D to generate 3D models from them. Then, we used Mixamo to rig and animate these models.\n\nLastly, we used an ACE model to generate suspenseful background music, completing the requirement of having three types of AI generated content. This was a last-minute decision, because we spent so much time fine-tuning the system prompts. Given enough time, we would have added a text-to-speech model to make the characters speak the reply of the LLM out loud.\n\nAs the only GMT student with experience in Unity, I was mostly responsible for developing the game itself, while my two teammates focused on developing the story, writing system prompts, and generating most of the content."
+        },
+        {
+            "title": "S-Maze",
+            "startDate": "2025-12-1",
+            "endDate": "2026-1-23",
+            "imgRefs": [
+                {
+                    "url": "images/fairseco.png",
+                    "caption": "caption"
+                },
+                {
+                    "url": "images/fairseco2.png",
+                    "caption": "caption"
+                }
+            ],
+            "links": [],
+            "content": "Serious game prototype for the course Sound and Music Technology (INFOMSMT). The aim of the project was to create a game that could be used as preparation for the exam. Our initial idea was to let the player develop their skills and knowledge by incorporating the course material into all kinds of puzzles. Due to the limited amount of time, we ended up shifting the focus to questions the player needed to answer correctly after completing a (simplified) puzzle. As the only person on our team with significant experience with Unity, I took on most of the responsibility for developing the game. In particular, I worked on generating the mazes, and implementing the audio system, quizzes and UI."
+        }
+    ]
+}
