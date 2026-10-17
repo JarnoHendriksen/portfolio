@@ -1,0 +1,109 @@
+.Project-heading {
+    font-size: calc(12px + 3vmin);
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-bg-header);
+}
+
+.Project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    width: calc(100% - 10vw);
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 0vh;
+    margin-left: 5vw;
+    padding-top: 5vh;
+    z-index: 2;
+    transform: skewY(-2deg);
+    transform-origin: 100%;
+}
+
+.Project {
+    transform: skewY(2deg);
+    margin-bottom: 5vmin;
+    margin-right: 4vw;
+    width: 75vw;
+}
+
+.Project > * {
+    padding-bottom: 1vh !important;
+}
+
+.Project-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.Project-text > * {
+    padding-bottom: 1vh !important;
+}
+
+.Project-text p {
+    text-align: justify;
+}
+
+.Project-link {
+    display: inline-block;
+    padding: 0.5%;
+    margin-right: 0.5vw;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Project-image {
+    position: relative;
+    cursor: pointer;
+}
+
+.Project-image img {
+    width: 20vmax;
+    height: 20vmax;
+    object-fit: cover;
+    border: 2px solid var(--color-primary);
+}
+
+.Project-gallery-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 2%;
+    border-radius: 5px;
+    font-size: calc(12px + 0.8vmin);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 1000px) {
+    .Project-container {
+        padding-top: 2em;
+        width: 100%;
+    }
+
+    .Project {
+        width: 90vw;
+    }
+
+    .Project:last-child {
+        padding-bottom: 15vmin;
+    }
+
+    .Project-content {
+        flex-direction: column-reverse;
+    }
+
+    .Project-text {
+        padding-bottom: 15vh;
+    }
+
+    .Project-image img {
+        width: 100%;
+        height: 50vmin;
+        margin: auto;
+        margin-bottom: 1vh;
+    }
+}

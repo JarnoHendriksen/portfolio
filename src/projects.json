@@ -75,11 +75,11 @@
             "endDate": "2025-11-5",
             "imgRefs": [
                 {
-                    "url": "images/fairseco.png",
+                    "url": "unusual-suspects1.png",
                     "caption": "caption"
                 },
                 {
-                    "url": "images/fairseco2.png",
+                    "url": "unusual-suspects2.png",
                     "caption": "caption"
                 }
             ],
@@ -105,7 +105,16 @@
                     "caption": "caption"
                 }
             ],
-            "links": [],
+            "links": [
+                {
+                    "name": "GitHub",
+                    "url": "https://github.com/JarnoHendriksen/S-Maze"
+                },
+                {
+                    "name": "Itch",
+                    "url": "https://jarnoh.itch.io/s-maze"
+                }
+            ],
             "content": "Serious game prototype for the course Sound and Music Technology (INFOMSMT). The aim of the project was to create a game that could be used as preparation for the exam. Our initial idea was to let the player develop their skills and knowledge by incorporating the course material into all kinds of puzzles. Due to the limited amount of time, we ended up shifting the focus to questions the player needed to answer correctly after completing a (simplified) puzzle. As the only person on our team with significant experience with Unity, I took on most of the responsibility for developing the game. In particular, I worked on generating the mazes, and implementing the audio system, quizzes and UI."
         }
     ]

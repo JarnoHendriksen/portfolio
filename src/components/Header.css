@@ -1,0 +1,211 @@
+p {
+    margin: 0;
+    padding: 0;
+    color: var(--color-primary);
+    white-space: pre-wrap;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    &::after {
+        background-color: var(--color-secondary);
+    }
+}
+
+.Header {
+    background-color: #282c34;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: relative;
+    z-index: 2;
+
+    &:before,
+    &:after {
+        background: inherit;
+        content: "";
+        display: block;
+        height: 75%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -2;
+        overflow: hidden;
+    }
+
+    &:before {
+        top: 0;
+        transform: skewY(0deg);
+        transform-origin: 0% 0;
+    }
+
+    &:after {
+        bottom: 0;
+        transform: skewY(-2deg);
+        transform-origin: 100%;
+        background-color: transparent;
+        z-index: inherit;
+    }
+}
+
+.PersonPhoto {
+    background-color: transparent;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    align-items: center;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    position: relative;
+    z-index: -1;
+
+    &:before,
+    &:after {
+        background: inherit;
+        content: "";
+        display: block;
+        left: 0;
+        position: absolute;
+        /* right: 0; */
+        z-index: 1;
+    }
+
+    &:before {
+        background-color: #aaa;
+        bottom: -80vh;
+        right: 0;
+        height: 80vh;
+        width: 100vw;
+        transform: skewY(-2deg);
+        transform-origin: 100%;
+        border-top: 2px solid black;
+    }
+
+    &:after {
+        background-color: #aaa;
+        left: 90%;
+        top: 0;
+        width: 95vw;
+        height: 100vh;
+        transform: skewX(3deg);
+        transform-origin: 0 0;
+        border-left: 2px solid black;
+    }
+}
+
+.PersonPhoto img {
+    width: 10vmax;
+    height: calc(21vh + 4vw);
+    transform: translate(-3%, calc(10% + 0.5vw));
+    object-fit: cover;
+    z-index: -1;
+}
+
+.Header-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 3;
+}
+
+.Header-info a {
+    display: inline-block;
+    &::after {
+        animation-name: Link-unhover;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.Header-info a::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    margin: auto;
+}
+
+.Header-info a:hover {
+    &::after {
+        animation-name: Link-hover;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.Header-content {
+    flex-grow: 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Header-button {
+    margin-right: 10vw;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: var(--color-primary);
+    cursor: pointer;
+    z-index: 3;
+}
+
+@keyframes Link-hover {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes Link-unhover {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .Header::after {
+        background-color: #3a3a3a;
+        z-index: -2;
+    }
+
+    .Header-button {
+        margin-right: 0;
+    }
+
+    .Header-content {
+        flex-direction: column;
+    }
+
+    .PersonPhoto {
+        width: calc(25vmin + 5vmax);
+    }
+
+    .PersonPhoto::after {
+        display: none;
+    }
+
+    .PersonPhoto img {
+        width: 100%;
+        height: calc(30vmax + 5vmin);
+        transform: translateY(5%);
+        object-position: 60% 25%;
+    }
+}
