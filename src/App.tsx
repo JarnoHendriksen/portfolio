@@ -5,7 +5,7 @@ import MenuBar from "./components/MenuBar";
 import Project from "./components/Project";
 import ImageGallery from "./components/ImageGallery";
 
-import {ProjectData, ImageData, Link} from "./types";
+import {ProjectData, ImageData, Link, ImgRef} from "./types";
 
 import "./vars.css";
 import "./App.css";
@@ -50,7 +50,9 @@ export function App() {
 
     React.useEffect(() => {
         let execOnce = false;
+
         if (execOnce) return;
+
         fetch(`${window.location.href}content`)
         .then((res) => {
             return res.json();
@@ -73,6 +75,17 @@ export function App() {
             });
 
             setProjectData(projects);
+        })
+        .catch(() => {
+            const mockData = [{
+                title: "Sample Project",
+                startDate: new Date("2025-05-17"),
+                endDate: new Date("2026-05-17"),
+                imgRefs: [] as ImgRef[],
+                links: [] as Link[],
+                content: "This text would have actual content if the page was hosted on jarnohendriksen.nl",
+            }];
+            setProjectData(mockData);
         });
 
         return () => {execOnce = true;};
@@ -92,6 +105,9 @@ export function App() {
             }
 
             setProjectImages(images);
+        })
+        .catch(() => {
+            setProjectImages({});
         });
 
         return () => {execOnce = true;};

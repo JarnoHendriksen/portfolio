@@ -3,6 +3,8 @@ body[data-theme="light"] {
     --color-secondary: #859900;
     --color-bg-primary: #fdf6e3;
     --color-bg-header: #fdf6e3;
+    --color-bg-link: rgb(0, 0, 0, 0.1);
+    --color-border-link: rgb(0, 0, 0, 0.3);
 }
 
 body[data-theme="dark"] {
@@ -10,4 +12,6 @@ body[data-theme="dark"] {
     --color-secondary: #cb4b16;
     --color-bg-primary: #073642;
     --color-bg-header: #073642;
+    --color-bg-link: rgb(255, 255, 255, 0.1);
+    --color-border-link: rgb(255, 255, 255, 0.3);
 }

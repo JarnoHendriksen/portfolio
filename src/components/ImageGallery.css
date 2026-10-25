@@ -34,6 +34,10 @@
     object-fit: contain;
 }
 
+.Gallery-image-container figcaption {
+    text-align: center;
+}
+
 .Gallery-controls {
     font-size: calc(18px + 1.5vmax);
     font-weight: bold;

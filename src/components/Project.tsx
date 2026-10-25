@@ -19,20 +19,19 @@ function Links({links}: {links: Link[]}) {
 
 function ImageGalleryPreview({imgRefs, imgData, galleryActiveState}: {imgRefs: ImgRef[], imgData: ImageData, galleryActiveState: ReactState<boolean>}) {
     let [galleryActive, setGalleryActive] = galleryActiveState;
-    
-    if (imgRefs.length < 1 || imgRefs[0].url === "") {
-        return null;
-    }
+
+    let noimage = imgRefs.length === 0;
 
     let handleGalleryClick = () => {
         setGalleryActive(true);
     }
 
-    let imgUrl = `https://utfs.io/f/${imgData[imgRefs[0].url]}`;
+    let imgUrl = noimage ? "https://placehold.co/600" : `https://utfs.io/f/${imgData[imgRefs[0].url]}`;
+    let caption = noimage ? "Placeholder" : imgRefs[0].caption;
     
     return (
         <div className="Project-image">
-            <img src={imgUrl} alt={imgRefs[0].caption} onClick={handleGalleryClick}/>
+            <img src={imgUrl} alt={caption} onClick={handleGalleryClick}/>
             <div className="Project-gallery-icon">
                 <FontAwesomeIcon icon={["fas", "images"]} />
             </div>
